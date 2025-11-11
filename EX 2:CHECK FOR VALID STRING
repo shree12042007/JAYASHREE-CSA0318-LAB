@@ -1,0 +1,20 @@
+#include <stdio.h>
+#include <ctype.h>
+
+int main() {
+    char str[100];
+    int i, flag = 1;
+    printf("Enter a string: ");
+    scanf("%s", str);
+    for(i = 0; str[i] != '\0'; i++) {
+        if(!isalpha(str[i])) {
+            flag = 0;
+            break;
+        }
+    }
+    if(flag)
+        printf("Valid string\n");
+    else
+        printf("Invalid string\n");
+    return 0;
+}
